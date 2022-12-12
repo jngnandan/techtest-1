@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font: normal 16px Verdana, Arial ,sans-serif;
+    height: 100%;
+    color: #2F3133;
+}
+
+.App{
+    padding-top: 16px;
+}
+
+.tableContainer{
+    margin: 0 auto;
+    max-width: 425px;
+    border: 1px solid #e1e4e8;
+    background-color: #f6f6f8;
+}
+
