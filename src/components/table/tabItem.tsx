@@ -5,7 +5,7 @@ function TabItem(props) {
 
 
   return (
-    <div className='border-y border-blue-300'>
+    <div className='border-y border-skybluish primary'>
       <p className='text-center my-4 font-semibold'>{tier}</p>
       <div className='grid grid-cols-4 gap-2 lg:gap-4 mb-3'>
         <td className=''>{prices[0]}</td>

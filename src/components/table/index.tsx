@@ -5,8 +5,8 @@ import { ContentContext } from '../../context/ContentContext';
 import TabItem from './tabItem';
 
 export enum TableStyle {
-    StyleOne = "bg-blue-300 text-dark-800",
-    StyleTwo = "bg-dark-500 text-blue-500"
+    StyleOne = "bg-blue-300 text-darkish ",
+    StyleTwo = "bg-dark-500 text-white bg-darkish"
 }
 
 function Table({title, data, style}: {title: string, data: any, style: TableStyle}) {
@@ -27,10 +27,10 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
 
 
     return (
-        <div className=''>
+        <div className='bg-pastal text-darkish'>
             <h2 className='text-center font-semibold py-4'>{title.toUpperCase()}</h2>
             <table className={`table table--${style} w-full text-small bg-white`}>
-                    <tr className='grid grid-cols-4 gap-2 lg:gap-4 py-4 text-center w-full shadow-md bg-sky-100 border-y border-blue-300'>
+                    <tr className={`text-darkish grid grid-cols-4 gap-2 lg:gap-4 py-4 text-center w-full shadow-md bg-grayish border-y border-blue-300`}>
                         {priceBands.map(tabHeading => 
                             <th>{tabHeading}</th>
                         )}
