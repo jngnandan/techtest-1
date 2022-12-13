@@ -11,8 +11,8 @@ module.exports = {
       colors: {
         pastal: '#F6F6F8',
         skybluish: '#98C5E9',
-        darkish: '#001838',
         grayish: '#DAE8F3',
+        darkblue: '#001838',
       }
     },
   },

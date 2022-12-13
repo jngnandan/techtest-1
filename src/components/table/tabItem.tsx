@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TabItem(props) {
+function TabItem(props: any) {
   const {tier, prices} = props
 
 

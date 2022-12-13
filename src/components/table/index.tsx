@@ -5,8 +5,8 @@ import { ContentContext } from '../../context/ContentContext';
 import TabItem from './tabItem';
 
 export enum TableStyle {
-    StyleOne = "bg-blue-300 text-darkish ",
-    StyleTwo = "bg-dark-500 text-white bg-darkish"
+    StyleOne = "bg-blue-300 text-darkblue",
+    StyleTwo = "bg-dark-500 text-white bg-darkblue",
 }
 
 function Table({title, data, style}: {title: string, data: any, style: TableStyle}) {
@@ -15,11 +15,11 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
     const {priceBands, tiers} = data
     console.log(style)
 
-    const eastLevelOne = tiers.filter(eachitem => eachitem.tier === 'East Level 1')
-    const eastLevelTwo = tiers.filter(eachitem => eachitem.tier === 'East Level 2')
-    const eastLevelThree = tiers.filter(eachitem => eachitem.tier === 'East Level 3')
-    const ColinBellLevelOne = tiers.filter(eachitem => eachitem.tier == 'Colin Bell Level 1')
-    const ColinBellLevelTwo = tiers.filter(eachitem => eachitem.tier == 'Colin Bell Level 2')
+    const eastLevelOne = tiers.filter((eachitem: any) => eachitem.tier === 'East Level 1')
+    const eastLevelTwo = tiers.filter((eachitem: any) => eachitem.tier === 'East Level 2')
+    const eastLevelThree = tiers.filter((eachitem: any) => eachitem.tier === 'East Level 3')
+    const ColinBellLevelOne = tiers.filter((eachitem: any) => eachitem.tier === 'Colin Bell Level 1')
+    const ColinBellLevelTwo = tiers.filter((eachitem: any) => eachitem.tier === 'Colin Bell Level 2')
  
     // const pricesOne = eastLevelOne.map(eachitem => eachitem.prices)
     // console.log(pricesOne.map(eachitem => eachitem))
@@ -30,15 +30,15 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
         <div className='bg-pastal text-darkish'>
             <h2 className='text-center font-semibold py-4'>{title.toUpperCase()}</h2>
             <table className={`table table--${style} w-full text-small bg-white`}>
-                    <tr className={`text-darkish grid grid-cols-4 gap-2 lg:gap-4 py-4 text-center w-full shadow-md bg-grayish border-y border-blue-300`}>
-                        {priceBands.map(tabHeading => 
+                    <tr className={`text-darkblue grid grid-cols-4 gap-2 lg:gap-4 py-4 text-center w-full shadow-md bg-grayish border-y border-blue-300`}>
+                        {priceBands.map((tabHeading: any) => 
                             <th>{tabHeading}</th>
                         )}
                         
                     </tr>
 
                     <tr className='py-3 text-center w-full'>
-                        {eastLevelOne.map(tabData => {
+                        {eastLevelOne.map((tabData: any) => {
                             return(
                                 <div>
                                   {TabItem(tabData)}
@@ -48,7 +48,7 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
                     </tr>
 
                     <tr className='py-3 text-center w-full'>
-                        {eastLevelTwo.map(tabData => {
+                        {eastLevelTwo.map((tabData: any) => {
                             return(
                                 <div>
                                   {TabItem(tabData)}
@@ -58,7 +58,7 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
                     </tr>
 
                     <tr className='py-3 text-center w-full'>
-                        {eastLevelThree.map(tabData => {
+                        {eastLevelThree.map((tabData: any) => {
                             return(
                                 <div>
                                     {TabItem(tabData)}
@@ -68,7 +68,7 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
                     </tr>
 
                     <tr className='py-3 text-center w-full'>
-                        {ColinBellLevelOne.map(tabData => {
+                        {ColinBellLevelOne.map((tabData: any) => {
                             return(
                                 <div>
                                     {TabItem(tabData)}
@@ -78,7 +78,7 @@ function Table({title, data, style}: {title: string, data: any, style: TableStyl
                     </tr>
 
                     <tr className='py-3 text-center w-full'>
-                        {ColinBellLevelTwo.map(tabData => {
+                        {ColinBellLevelTwo.map((tabData: any) => {
                             return(
                                 <div>
                                     {TabItem(tabData)}
