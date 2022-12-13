@@ -7,3 +7,4 @@ it('renders header', () => {
     render(<Table title="My title" data={testData} style={TableType.StyleOne} />);
     expect(screen.getByText('My title')).toBeInTheDocument();
 });
+

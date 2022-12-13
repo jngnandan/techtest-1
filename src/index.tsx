@@ -5,12 +5,16 @@ import './fonts.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ContentProvider } from './context/ContentContext';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <ContentProvider>
     <App />
+    </ContentProvider>
   </React.StrictMode>
 );
 
